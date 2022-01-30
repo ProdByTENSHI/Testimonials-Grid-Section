@@ -73,4 +73,110 @@ select {
   }
 }
 
+/**/
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+/* font-family: 'Barlow Semi Condensed', sans-serif; */
+
+/* VARIABLES */
+:root {
+  --color-primary-card-1: hsl(263, 55%, 52%);
+  --color-primary-card-2: hsl(217, 19%, 35%);
+  --color-primary-card-3: hsl(219, 29%, 14%);
+  --color-primary-card-4: hsl(0, 0%, 100%);
+
+  --color-neutral-1: hsl(0, 0%, 81%);
+  --color-neutral-2: hsl(210, 46%, 95%);
+
+  --fs-base: 0.8125rem;
+  --fw-light: 500;
+  --fw-bold: 600;
+
+  --border-rad: 10px;
+}
+
 /* DESKTOP */
+body {
+  background-color: var(--color-neutral-2);
+  font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+main {
+  min-height: 100vh;
+
+  display: grid;
+  justify-content: center;
+  place-items: center;
+}
+
+.testimonials {
+  width: max(90%, 80vw);
+  height: min(75vh, 80%);
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+
+  border-radius: var(--border-rad);
+
+  gap: 1.75rem;
+}
+
+.testimonials__card {
+  padding: min(1rem, 2.5rem);
+
+  border-radius: var(--border-rad);
+  box-shadow: 15px 0px 40px rgba(40, 40, 40, 0.25);
+}
+
+.testimonials__card:nth-child(1) {
+  background-color: var(--color-primary-card-1);
+}
+
+.testimonials__card:nth-child(2) {
+  background-color: var(--color-primary-card-2);
+}
+
+.testimonials__card:nth-child(3) {
+  background-color: var(--color-primary-card-4);
+}
+
+.testimonials__card:nth-child(4) {
+  background-color: var(--color-primary-card-4);
+}
+
+.testimonials__card:nth-child(5) {
+  background-color: var(--color-primary-card-3);
+}
+
+.span_2 {
+  grid-column: span 2;
+}
+
+.span_2_height {
+  grid-row: span 2;
+}
+
+.testimonials__acc__name {
+  color: var(--color-neutral-1);
+}
+
+h1,
+h3 {
+  font-weight: var(--fw-bold);
+}
+
+p {
+  font-weight: var(--fw-light);
+}
+
+.testimonials__feedback {
+  color: var(--color-neutral-1);
+}
+
+.testimonials__acc p {
+  color: hsla(219, 29%, 14%, 0.5);
+}
+
+.testimonials__desc {
+  color: hsla(219, 29%, 14%, 0.7);
+}
